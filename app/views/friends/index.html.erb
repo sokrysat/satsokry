@@ -1,0 +1,21 @@
+<h1>Friendship</h1>
+<!-- <center> -->
+<div class="wrap">
+	<div id="control">
+		<% @friends.each do |friendshow|%>
+		<div class="container">
+			<div class="img">
+				<!-- <img class="eachimg" src= <%= image_path(friendshow.photo) %>/> -->
+				<%= link_to image_tag(friendshow.photo),bio_path(friendshow), class: "eachimg" %>
+			</div>
+			<div class="txt">
+				<p><%= "#{friendshow.last_name} #{friendshow.first_name}" %></p>
+				<%= link_to "Edit" , edit_friend_path(friendshow) %> ||
+				<%= link_to "Delete" , friend_path(friendshow), method: :delete , data: {confirm: "Sure you want to delete this person?"} %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<%= link_to '<button>Create new</button>'.html_safe,new_friend_path %>
+</div>
+<!-- </center> -->

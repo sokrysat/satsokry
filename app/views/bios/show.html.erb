@@ -1,0 +1,25 @@
+<center>
+<h1><font color="gree">Bios of Friend</font></h1>
+<table border="1">
+	<tr>
+			<th>Friend ID</th>
+			<th>DOB</th>
+			<th>POB</th>
+			<th>Skill</th>
+			<th>Favorite</th>
+			<th>Dream</th>
+	</tr>
+	<% @bios.each do |bio|%>
+	<tr>
+			<th><%= @bio.friend_id %></th>
+			<th><%= @bio.date_of_birth %></th>
+			<th><%= @bio.place_of_birth %></th>
+			<th><%= @bio.skills %></th>
+			<th><%= @bio.favorite %></th>
+			<th><%= @bio.dream %></th>
+			
+	</tr>
+	<% end %>
+</table>
+
+</center>

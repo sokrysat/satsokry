@@ -1,0 +1,25 @@
+<center>
+	<h1>Show Bios</h1>
+<table border="1">
+	<tr>
+		<th>DOB</th>
+		<th>POB</th>
+		<th>SKILLS</th>
+		<th>FAVORITE</th>
+		<th>DREAM</th>
+		<th>FIENDID</th>
+		<th>ACTION</th>
+	</tr>
+	<% @bios.each do |bioshow|%>
+	<tr>
+		<th><%= bioshow.date_of_birth %></th>
+		<th><%= bioshow.place_of_birth %></th>
+		<th><%= bioshow.skills %></th>
+		<th><%= bioshow.favorite %></th>
+		<th><%= bioshow.dream %></th>
+		<th><%= bioshow.friend_id %></th>
+		<th><%= link_to "Delete" , bio_path(bioshow), method: :delete %></th>
+	</tr>
+	<% end %>
+</table>
+</center>

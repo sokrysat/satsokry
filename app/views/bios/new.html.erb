@@ -1,0 +1,28 @@
+
+<%= form_for(@bio) do |bi| %>
+<p>
+	<%= bi.label :date_of_birth %></br>
+	<%= bi.text_field :date_of_birth %>
+</p>
+<p>
+	<%= bi.label :place_of_birth %></br>
+	<%= bi.text_field :place_of_birth %>
+</p>
+<p>
+	<%= bi.label :skills %></br>
+	<%= bi.text_field :skills %>
+</p>
+<p>
+	<%= bi.label :favorite %></br>
+	<%= bi.text_field :favorite %>
+</p>
+<p>
+	<%= bi.label :dream %></br>
+	<%= bi.text_field :dream %>
+</p>
+
+<p>
+	<%= bi.submit %></br>
+
+</p>
+<% end %>
